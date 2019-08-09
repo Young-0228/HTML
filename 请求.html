@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://train.ctrip.com/TrainBooking/Search.aspx">
+    出发地：<input type="text" name="from">
+    目的地：<input type="text" name="to">
+    日期：<input type="date" name="day">
+    <input type="hidden" name="number" value="">
+    <input type="submit" name="fromCn" value="搜索">
+
+</form>
+
+</body>
+<script src="html/jquery-3.4.1.min.js"></script>
+<script>
+
+
+    $("input[type = 'submit']").on("click",function () {
+        // 阻止默认事件
+        event.preventDefault();
+        // serialize:序列化器 获取json格式的字符串
+        var parse = $("form").serialize();
+        // console.log($("form").serializeArray());
+        console.log(parse);
+    // $.ajax(): 定义jq中的ajax方式
+    $.ajax({
+        // url：获取请求服务器的地址
+        url:"https://train.ctrip.com/TrainBooking/Search.aspx",
+        // type："get"请求方式，网页请求都是get方式
+        type:"get",
+        // data：传递数据
+        data:"",
+        // 数据格式：默认json
+        dataType:"json",
+        //timeout: 倾诉数据超时 单位毫秒
+        timeout:1000,
+        success:function (data) {
+            console.log(data)
+        },
+        error:function (data) {
+            console.log(data)
+        }
+
+    })
+
+    })
+
+
+
+</script>
+</html>

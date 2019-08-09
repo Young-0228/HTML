@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+// <!--  约瑟夫环  -->
+//     var list1 = [1,2,3,4,5,6,7,8,9,10];
+//     while(list1.length>2){
+//          var list2 = list1.slice(0,3);
+//          document.write(`<h3>要枪毙的人是${list2.pop()}<h3>`);
+//          list1.splice(0,3);
+//          document.write(`<h3>剪切后的数组是${list1}`);
+//          var list1 = list1.concat(list2);
+//          document.write(`<h3>拼接后的数组是${list1}`);
+//     }
+//     if(list1.length = 2){
+//         document.write(`<h3>要枪毙的人是${list1.shift()}<h3>`);
+//         document.write(`<h3>最后留下来的人是${list1[0]}<h3>`);
+//     }
+//
+
+
+
+    // // 定义一个3行3列的二维数组，存储[15,25]的随机整数，
+    // // 求该二维数组的所有鞍点下标？
+    // // （鞍点：即该位置的数字及时对应行的最大值同时也是对应列的最小值）
+    // list1 = [];
+    // for(var i=0;i<3;i++){
+    //     temp = [];
+    //     for(var j=0;j<3;j++){
+    //         temp[j] = Math.floor(Math.random()*11 +15)
+    //
+    //     }
+    //     list1.push(temp);
+    // }
+    // console.log(list1);
+    //
+    // for(var i=0;i<3;i++){
+    //     for(var j=0;j<3;j++){
+    //         var ad = list1[i][j];
+    //         // ad 假设这是一个鞍点0：(3) [19,20,23]
+    //         //                    1：(3) [21,19,25]
+    //         //                    2：(3) [19,25,18]
+    //         var result = true;
+    //
+    //          for(var k=0;k<3;k++){           // 行中是否是最大
+    //                 if(ad < list1[i][k]){      // 假设ad鞍点不成立
+    //                     result = false;
+    //                     break;
+    //                 }
+    //             };
+    //             if(result){     // 判断是否是行中最大
+    //                 for(var k=0;k<3;k++){
+    //                     if(ad > list1[k][j]){
+    //                         result = false;
+    //                         break;
+    //                     }
+    //                 }
+    //             }
+    //             if(result){
+    //                document.write(`鞍点为第${i+1}行，第${j+1}列，鞍点是${ad} <hr>`)
+    //             }
+    //
+    //         }
+    //     }
+
+    // //判断身份证号长度内容是否合法
+    // var num = prompt("身份证号");
+    // if(num.length == 18){
+    //     if(num[17] >= 0 && num[17] <= 9 || num[17] == "X"){
+    //         alert("正确")
+    //     }else{
+    //         alert("不正确")
+    //     }
+    // }
+
+    // var number = "My name is zhangsan,my Age is 18.";
+    // var z_ze = /a/;
+    // var z_num = number.match(z_ze);
+    // console.log(z_num);
+    // document.write(`<h3>${z_num}<h3>`)
+    //
+
+    // 正则：按着一定的规则，匹配目标字符串
+    var name = "sjfdgh,s,jaDh1,24,21C3,1J2,4H5,A53,5424f6,kh5,m7,6kdshj,kaf"
+    var z_ze = /[0-9a-hA-H]/g;
+    var name1 = name.match(z_ze);
+    console.log(name);
+    console.log(name1);
+    document.write(`<h3>${name}<h3>`);
+    document.write(`<h3>${name1}<h3>`);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<body>
+
+</body>
+</html>

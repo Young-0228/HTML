@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="html/css/bootstrap.min.css">
+    <style>
+
+        /*#div1{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: #65b4f4;*/
+        /*}*/
+
+
+        .cla{
+            width: 200px;
+            height: 200px;
+            border: 2px solid palegoldenrod;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="cla">
+
+</div>
+
+<!--    <div id="div1"></div>-->
+<!--    <button class="btn btn-default">变色</button>-->
+
+
+<!--    <button class=""btn btn-warning id="btn1">警告1</button>-->
+<!--    <button class=""btn btn-warning>警告2</button>-->
+<!--    <button class=""btn btn-warning>警告3</button>-->
+<!--    <button class=""btn btn-warning>警告4</button>-->
+<!--    <button class=""btn btn-warning>警告5</button>-->
+</body>
+<script>
+<!--  获取class标签  -->
+    // 创建h3标签
+    var h3 = document.createElement("h3");
+    cla.appendChild(h3);
+    h3.innerHTML = `壹号中北`;
+    for(var i=0;i<5;i++){
+        var p = document.createElement("p");
+        cla.appendChild(p);
+        p.innerHTML = `p${i}`;
+        // insertBefore:添加到标签前面，两个参数
+        //参数一：标签，参数二：位置
+        // var first_p = document.querySelector("p");
+        // cla.insertBefore(p,first_p);
+    }
+    var ps = document.querySelector("p");
+    console.log(ps);
+    cla.removeChild(ps[3]);
+    cla.removeChild(h3,ps[2])
+
+    // function rand_color() {
+    //     var r = Math.floor(Math.random()*256);
+    //     var g = Math.floor(Math.random()*256);
+    //     var b = Math.floor(Math.random()*256);
+    //     return `rgb(${r},${g},${b})`
+    // }
+    // var btn = document.querySelector(".btn");
+    // console.log(btn);
+    // btn.onclick = function () {
+    //     div1.style.backgroundColor = rand_color();
+    //
+    // }
+
+
+
+
+
+    // btn1.onclick = function () {
+    //     alert("警告")
+    // };
+    // var btns = document.getElementsByClassName("btn");
+    // for(var i=0; i<btns.length; i++){
+    //     btns[i].onclock = function () {
+    //         alert("警告")
+    //     }
+    // }
+
+
+</script>
+</html>

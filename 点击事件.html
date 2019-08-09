@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: #65b4f4;
+        }
+        .son{
+            width: 150px;
+            height: 150px;
+            background-color: #FF7D35;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+
+    </div>
+
+</body>
+<script src="html/jquery-3.4.1.min.js">alert("aaaaaa")</script>
+<script>
+    // 点击事件
+    // // alert("aaaaaa")
+    // $(".father").on("click",function () {
+    //     alert("father");
+    // })
+    // $(".son").on("click",function () {
+    //     alert("son");
+    // })
+
+    // // 双击事件
+    // $(".son").on("dblclick",function () {
+    //     alert("双击")
+    // })
+
+    // 鼠标移进，移出  mouseover: 有冒泡事件触发
+    // $(".father").on("mouseover",function () {
+    //     // console.log("鼠标移进")
+    //
+    // });
+    // $(".father").on("mouseover",".son",function () {
+    //     console.log("移进son")
+    //
+    // });
+    // $(".father").on("mouseleave",".son",function () {
+    //    console.log("移出son")
+    // });
+    // $(".father").on("mouseout",".son",function () {
+    //    console.log("移出son")
+    // });
+    // $(".father").on("mouseenter",".son",function () {
+    //     console.log("移进son")
+    // });
+    //
+    // // 移动事件
+    // $(".son").on("mousemove",function () {
+    //     console.log(event);
+    //     // currentTarget: 获取当前标签
+    //     console.log(event.currentTarget);
+    //
+    //     console.log("动！");
+    //     // event.pageX: 获取标签鼠标相对于网页左上角的位置
+    //     console.log(event.pageY);
+    // });
+
+    // 右击事件
+    $(".son").on("contextmenu",function () {
+        console.log("右击");
+        // 阻止默认事件
+        return false;
+    })
+
+</script>
+</html>

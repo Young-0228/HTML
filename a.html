@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<!--    <button class="btn btn-success btn-default" id="btn">点击</button>-->
+<!--      <div>-->
+<!--        <input type="text" id="inp1" placeholder="请输入你要查询到月份">-->
+<!--    </div>-->
+<!--    <div><button id="btn" class="btn btn-default">季节转换</button></div>-->
+<!--    <div>-->
+<!--        <input type="text" id="inp2" placeholder="季节显示栏">-->
+<!--    </div>-->
+
+    <div>
+        <input type="text" id="inp1" placeholder="请输入一个字符">
+    </div>
+    <div>
+        <button id="btn1" class="btn btn-default">+</button>
+        <button id="btn2" class="btn btn-default">-</button>
+        <button id="btn3" class="btn btn-default">*</button>
+        <button id="btn4" class="btn btn-default">/</button>
+    </div>
+    <div>
+        <input type="text" id="inp2" placeholder="">
+    </div>
+    <div>
+        =
+    </div>
+    <div>
+        <input type="text" id="inp3" placeholder="">
+    </div>
+
+
+
+</body>
+<!-- js引入方式 -->
+<script>
+        var inp1=document.getElementById("inp1");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var inp2 = document.getElementById("inp2");
+        var inp3 = document.getElementById("inp3");
+
+        btn1.onclick = function () {
+            inp1=inp1.value;
+            btn1.innerHTML = "+";
+            inp2=inp2.value;
+            inp3.value=parseInt(inp1)+parseInt(inp2)
+        }
+        btn2.onclick = function () {
+            inp1=inp1.value;
+            btn2.innerHTML = "-";
+            inp2=inp2.value;
+            inp3.value=parseInt(inp1)-parseInt(inp2)
+        }
+        btn3.onclick = function () {
+            inp1=inp1.value;
+            btn3.innerHTML = "*";
+            inp2=inp2.value;
+            inp3.value=parseInt(inp1)*parseInt(inp2)
+        }
+        btn4.onclick = function () {
+            inp1=inp1.value;
+            btn4.innerHTML = "/";
+            inp2=inp2.value;
+            inp3.value=parseInt(inp1)/parseInt(inp2)
+        }
+
+
+
+
+    // var inp1=document.getElementById("inp1");
+    // var btn = document.getElementById("btn");
+    // var inp2 = document.getElementById("inp2");
+    // btn.onclick = function () {
+    //
+    //     var code = inp1.value;
+    //     inp2.value = code.charCodeAt()
+    //
+    // }
+
+//      var inp1 = document.getElementById("inp1");
+// //        document.write(inp1)
+//         var btn = document.getElementById("btn");
+//         var inp2 = document.getElementById("inp2");
+//         btn.onclick = function () {
+// //            获取inp1输入框里的内容
+//             var month = Math.floor(inp1.value);
+//             if(month == 3 || month == 4 ||month == 5){
+//                 inp2.value = "春季";
+//             }else if(month == 6 || month == 7 ||month == 8){
+//         //                inp2.innerHTML = "夏季"  //普通标签显示方式：inp2.innerHTML = "content"
+//                 inp2.value = "夏季";
+//             }else if(month == 9 || month == 10 ||month == 11){
+//                 inp2.value = "秋季";
+//             }else if(month == 12 || month == 1 ||month == 2){
+//                 inp2.value = "冬季";
+//             }else {
+//                 inp2.value = "你输入的月份有误";
+//             }
+//         }
+
+
+
+
+    // var year = prompt("请输入一个年份")
+    // if(year%400==0||(year%4==0 && year%100!=0)){
+    //     document.write(`你输入的年份${year}是闰年`)
+    // }else{
+    //     document.write(`你输入的年份${year}不是闰年`)
+    // }
+
+    // var month = prompt("请输入一个月份");
+    // if(month == 2){
+    //     document.write("请重新输入")
+    // }else if(month == 1||month == 3||month == 5||month == 7||month == 8||month == 10||month == 12){
+    //     document.write(`你输入的月份${month}有31天`)
+    // }else if(month == 4||month == 6||month == 9||month == 11){
+    //     document.write(`你输入的月份${month}有30天`)
+    // }else{
+    //     document.write(`请重新输入`)
+    // }
+
+    // var month = prompt("请输入一个月份");
+    // if(month == 3||month == 4||month == 5){
+    //     document.write(`你输入的季节${month}是春季`)
+    // }else if(month == 6||month == 7||month == 8){
+    //     document.write(`你输入的季节${month}是夏季`)
+    // }else if(month == 9||month == 10||month == 11){
+    //     document.write(`你输入的季节${month}是秋季`)
+    // }else if(month == 12||month == 1||month == 2){
+    //     document.write(`你输入的季节${month}是冬季`)
+    // }
+
+
+
+
+
+
+    // var result = confirm("你确认要删除信息吗？")
+    // if (result){
+    //     alert("已删除")
+    // }
+
+
+
+    // 定义一个变量
+    // var name = "张三,a";
+    // var age = 18;
+    // var money= 718;
+    // money = parseInt(money);
+    // var bai_num = Math.floor(money/100);    //7
+    // money %= 100;   // 18
+    // var ws_num = Math.floor(money/50); // 0
+    // money %= 50; //18
+    // var s_num = Math.floor(money/10);//1
+    // money %= 10;//8
+    // var w_num = Math.floor(money/5);//1
+    // money %= 5;//3
+    // y_num = money % 1;
+    //
+    // document.write(`${bai_num}+"张100"+ ${ws_num} + "张50" + ${s_num} + "张10"
+    // + ${w_num} + "张5" + ${y_num} + "张1"`)
+    // document.write("<hr>")
+    //
+    // var num1 = 100;
+    // var num2 = 100;
+    // num1 = (num2++)+(++num2)+num2+(++num2)+(num2++)
+    // document.write(num1)
+    // document.write("<hr>")
+    // document.write(num2)
+    //
+    // var name = "wang";
+    // alert("同学");
+    // alert(name);
+    // //确认框confirm
+    // confirm("今天开心吗")
+    // //额外信息提示框
+    // prompt("请输入要搜索的内容")
+    // document.write("<hr>")
+    //
+    // var money = prompt("请输入你要分析的钱数");
+    // money = parseInt(money);
+    // ws_money = Math.floor(money / 50);
+    // document.write(ws_money);
+
+    // var btn = document.getElementById("btn");
+    // console.log(btn);
+    // btn.onclick = function () {
+    //     var money = prompt("请输入钱数")
+    //     var money = parseInt(money);
+    //
+    //     var bai_num = Math.floor(money / 100);
+    //     money %= 100;
+    //     var ws_num = Math.floor(money / 50);
+    //     money %= 50;
+    //     var s_num = Math.floor(money / 10);
+    //     money %= 10;
+    //     var w_num = Math.floor(money / 5);
+    //     money %= 5;
+    //     y_num = money % 1;
+    //     var infor = `${bai_num}+"张100"+ ${ws_num} + "张50" + ${s_num} + "张10"
+    // + ${w_num} + "张5" + ${y_num} + "张1"`;
+    //     document.write(`<h1>${infor}<h1>`)
+    // }
+
+
+
+</script>
+</html>

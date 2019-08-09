@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="div1">
+    jq对象应用
+</div>
+
+    <script src="html/jquery-3.4.1.min.js"></script>
+    <script>
+        // js 原生获取标签的方式
+        var div1 = document.querySelector(".div1");
+        console.log(div1);
+        // jq中js对象获取标签的方式  $()
+        var jq1 = $(".div1");
+        // 利用js对象添加样式：对象.css(字典)
+        $(".div1").css({
+            color:"red",
+            width:"100px",
+            border:"1px solid black"
+
+            }
+        );
+        // 创建并添加标签
+        $(".div1").append("<a>咱们去中北</a>");
+        // 获取样式
+        var css_color = $(".div1").css("color");
+        // 获取标签内容的高度
+        var div_height = $(".div1").height();
+        // 获取内容层和内边距的高度
+        var div_height1 = $(".div1").innerHeight();
+        // 获取内容层，内边距和边框的高度
+        var div_height2 = $(".div1").outerHeight();
+        console.log(css_color);
+        console.log(div_height);
+        console.log(div_height1);
+        console.log(div_height2);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

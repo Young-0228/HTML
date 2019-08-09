@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+              text-align: center;
+            }
+            .cla{
+                width: 120px;
+                height: 160px;
+                border: 1px solid red;
+                position: relative;
+                top: 300px;
+                left: 880px;
+                overflow: hidden;
+            }
+            .img{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+    <img src="img/动态图.png" alt="">
+    <div class="cla">
+        <img src="img/动态图.png" alt="" class="img">
+    </div>
+    <script>
+        var img = document.querySelector(".img");
+        index = getComputedStyle(img).left;//位置下标
+        index = parseFloat(index); // 转换成浮点型
+        console.log(index);
+
+        setInterval(function () {
+            index = index - 120;    //每次定时走一张图片
+            //给显示框变换图片，（每张图片的位置发生了变化）
+            img.style.left = index +"px";
+//            判断：整张图片是都走完
+            if(index <= -840 ){
+//                重新归位，循环执行
+                index = 0;
+                img.style.left = 0;
+            }
+
+        },200)
+
+
+    </script>
+    </body>
+</html>

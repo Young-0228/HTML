@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+
+
+
+
+
+
+
+        /*属性选择框*/
+        input[ name ]{
+            background-color: #65b4f4;
+        }
+        /*根据指定属性选择标签*/
+        input[ name="pwd" ]{
+            width: 500px;
+        }
+        /* 根据包含某个字母选择标签*/
+        input[name *= a]{
+            height: 200px;
+        }
+        /* 根据某个单词开头选择标签*/
+        input[name ~= p]{
+            box-shadow: 2px 4px 10px red;
+        }
+        .cla~p{
+            font-size: 30px;
+        }
+        .cla+div{
+            color: #65b4f4;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="cla">zhongbei</div>
+    <p>zhongbeidaxue</p>
+
+
+
+
+<form action="">
+    <div>
+        用户名：<input type="text" name="name">
+    </div>
+    <div>
+        密码：<input type="password" name="p wd">
+    </div>
+
+
+    <div>
+        <!-- 地址-->
+        <addr>
+            北京
+        </addr>
+        <!-- 日期-->
+        <date>
+            2018
+        </date>
+        <!--斜体-->
+        <i>
+            中北
+        </i>
+    </div>
+    <div>
+        <input type="date" name="date" value="2019-06-11">
+    </div>
+    <div>
+        <input type="week" name="week" value="2019-W18">
+    </div>
+    <div>
+        <input type="file" id="file1" style="display: none">
+        <label for="file1" class="">
+            上传文件
+        </label>
+        <input type="submit" value="sub">
+    </div>
+    </form>
+</body>
+</html>

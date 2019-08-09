@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .cla1{
+                width: 200px;
+                height: 30px;
+                background: cornflowerblue;
+                /* 外边距 */
+                /*上、右、下、左*/
+                margin: 80px 80px ;
+
+            }
+            .cla2{
+                width: 200px;
+                height: 30px;
+                background: cornflowerblue;
+                /* 外边距 */
+                /*上、右、下、左*/
+                margin: 40px 80px ;
+                border:1px solid rgba(255,42,34,0.5);
+                /* padding内边距  会将内容撑大 */
+                /*padding:30px 50px*/
+                padding-top: 50px;
+                padding-right:30px;
+                padding-bottom: 50px;
+                padding-left: 30px;
+            }
+
+            .cla3{
+                width: 200px;
+                height: 30px;
+                background: cornflowerblue;
+                /* 外边距 */
+                /*  border边框 有3个参数 */
+                /* 第一个参数：边框的粗细程度*/
+                /* 第二个参数：边框的样式 dashed：虚线*/
+                /* 第三个参数：颜色 rgba（四个参数：颜色，颜色，颜色，透明度）*/
+                /*border: 1px solid rgba(255,42,34,0.5);*/
+                /*上、右、下、左*/
+                margin: 20px 80px ;
+                border-top: 1px solid rgba(255,42,34,0.5);
+                border-right: 1px solid rgba(255,42,34,0.5);
+                border-bottom: 1px solid rgba(255,42,34,0.5);
+                border-left: 1px solid rgba(255,42,34,0.5);
+            }
+            .cla4{
+                /*vertical-align 微调文字和图片对齐*/
+                vertical-align: 4px;
+            }
+            .cla5{
+                display: block;
+                /*width: 200px;*/
+                /*height: 200px;*/
+                background-color: blue;
+                color: bisque;
+                /*块属性行高*/
+                /*line-height: 100px;*/
+                /*text-align: center;*/
+                padding: 50px 50px;
+            }
+            .cla6{
+                width: 200px;
+                height: 40px;
+                background-color: orangered;
+            }
+            .cla7{
+                width: 200px;
+                height: 200px;
+                background-color: bisque;
+                line-height: 200px;
+                text-align: center;
+                /*四个值：水平方向，竖直方向，模糊程度，阴影颜色*/
+                box-shadow: 4px 4px 4px orangered,10px 10px 10px black;
+                /*内阴影*/
+                /*box-shadow: inset 0px 0px 100px red;*/
+                /*边框圆角*/
+                border-radius: 40px;
+            }
+            .p_cla8{
+                /*文字首行缩进*/
+                text-indent: 2em;
+                /*文字间隙*/
+                letter-spacing: 5px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+    <p class="p_cla8">lalalalaalalalalalalallalaalalallllalalalalalalalalalalalalalalallalalaallalala</p>
+    <div class="cla7">haha大学</div>
+    <div class="cla5">啦啦大学</div>
+        <span class="cla6">中北大学</span>
+
+
+<!--        <span class="cla4">中北大学</span>-->
+<!--        <img src="./img/1.png" alt="王">-->
+
+        <div class="cla1">大学</div><hr>
+        <!-- 属性快捷键：div[class=cla]*2  -->
+        <div class="cla2" style="font-weight:bold;">愿有岁月可回首</div>
+        <div class="cla3">且以深情共白头</div>
+
+    </body>
+</html>

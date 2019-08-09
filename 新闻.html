@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="html/css/main.css">
+    <script src="html/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="tab_wrap">
+        <div class="tab_btns">
+            <input type="button" value="公司新闻" class="current">
+            <input type="button" value="国际新闻">
+            <input type="button" value="行业动态">
+        </div>
+        <div class="tab_cons">
+            <ul>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+            </ul>
+            <ul>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+            </ul>
+            <ul>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+                <li><a href="">啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦拉拉</a><span>06-11 08:21</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // js 联动问题
+    $("input").on("click",function () {
+        // this 事件中的this可以代表这个发生事件的标签
+        // siblings 选中除了它本身的所有兄弟标签
+        $("this").addClass("current").siblings().removeClass("current");
+        $(".tab_cons").animate({"left":-$(this).index()*500});
+    });
+    
+    
+</script>
+</html>

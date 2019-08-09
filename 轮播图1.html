@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .big{
+                width: 260px;
+                background-color: #999999;
+                /*超出部分隐藏*/
+                overflow: hidden;
+                position: relative;
+            }
+            .small{
+                width: 1340px;
+                background-color: #FF7D35;
+                float: left;
+                /*去掉默认的字体样式*/
+                font-size: 0;
+                position: relative;
+                left: 0;
+                top:0;
+            }
+            img{
+                width: 260px;
+            }
+            .pages{
+                position: absolute;
+                left: 0;
+                bottom: 20px;
+                margin-left: 80px;
+            }
+            .page{
+                display: inline-block;
+                margin: 0 5px ;
+                width: 5px;
+                height: 5px;
+                border: 2px solid #999999;
+                border-radius: 50%;
+                background: #666666;
+            }
+            .page:hover {
+                background: rgba(255,255,255,0.6);
+            }
+            .select{
+               background: rgba(255,255,255,0.6);
+            }
+        </style>
+    </head>
+    <body>
+    <!--big:整个模块-->
+        <div class="big">
+            <!--small：图片管理-->
+            <div class="small">
+                <img src="img/QQ3.jpg" alt="">
+                <img src="img/QQ4.jpg" alt="">
+                <img src="img/QQ5.jpg" alt="">
+                <img src="img/QQ6.jpg" alt="">
+            </div>
+            <!--手动轮播-->
+            <div class="pages">
+                <span class="page select"></span>
+                <span class="page"></span>
+                <span class="page"></span>
+                <span class="page"></span>
+            </div>
+        </div>
+    </body>
+    <script>
+//        轮播图
+//        一张图片走动
+        var smalls = document.querySelector(".small");
+//                一次轮播函数   callback:回调函数
+//        index = 0;
+        var once_lb = function (end,callback) {
+                var begin = getComputedStyle(smalls).left;
+                console.log(begin);
+                var total = end - parseFloat(begin);
+                var step = 20;  // 一张图片分30步走完
+                var b_step = 0; // 步数
+                var time1 = setInterval(function () {
+                  b_step++;
+                    // 开始位置+你走的路
+                    smalls.style.left = parseFloat(begin) + total/step*b_step + "px";
+                    if(b_step>=step){
+                        clearInterval(time1);
+                        callback(time1);
+                    }
+                },10);
+        };
+//        once_lb(-260*4);
+////          匿名函数
+        var index = 0;  //表示图片
+        var auto_lb = function () {
+              var time1 = setInterval(function () {
+                  index++;
+                  if(index >= 4)
+                  {
+                      change_page(0);
+                  }else {
+                      change_page(index);
+                  }
+                  once_lb(-index*260,function () {  // function 是上面的callback
+                    if (index >= 4){
+                        index = 0;
+                        smalls.style.left = 0;
+                  }
+                  });
+              },3000);
+        };
+        auto_lb();
+
+//      轮播图下标记跟随图片一起显示
+        var page = document.querySelectorAll(".page");
+        function change_page(index) {
+//            index = 0;
+            for (var i=0;i<page.length;i++){
+//                setAttribute:设置标签的元素
+                page[i].setAttribute("class","page")
+            }
+            page[index].setAttribute("class","page select");
+        }
+
+//    手动轮播
+        var status = 0;  // 记录点击次数,0表示未点击状态
+        for(var i=0;i<page.length;i++) {
+            page[i].index = i;
+            page[i].onclick = function () {
+                if (status == 0) {
+                    status = 1;
+//              this.index ：鼠标操作呢个标签，this就表示这个标签
+                    index = this.index;
+                    change_page(index);
+                    once_lb(-index * 260, function () {
+//                      自动轮播
+                        auto_lb();
+                        status = 0;
+                    });
+                }
+            }
+        }
+
+
+    </script>
+
+</html>

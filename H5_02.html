@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        /*  边框合并  */
+        }
+        #mark1{
+            text-align: center;
+        }
+        .cla1{
+            widtd:200px;
+            height: 200px;
+            background: antiquewhite;
+            color: black !important;
+        /*  ！important 最高权重  */
+        }
+        .cla1{
+            /*4px水平，4px竖直，1px模糊程度*/
+            text-shadow: 4px 4px 1px red;
+            color: white;
+        }
+        .cla2{
+            color: #444444;
+        }
+        #a_id{
+            color: cornflowerblue;
+        }
+        /*权重1*/
+        div p{
+            color: bisque;
+        }
+        /*权重3*/
+        body div p{
+            color: pink;
+        }
+        .cla3{
+            text-align: center;
+        }
+        .cla4{
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<!--行间引入-->
+<!--<div class="class">行间引入</div>-->
+<!--input文本输入框-->
+<input type="text">百度一下
+
+
+
+
+<div>
+    <a href = "#"class = "a1" id = "a_id">中北小姐姐</a>
+    <p>中北小哥哥</p>
+</div>
+<!-- style="font-weight:bold" 文字加粗 -->
+<div class="cla3" style="text-align: center; font-weight:bold"  ><span>中北小姐姐和小哥哥</span></div><hr>
+<div class="cla4" style = "text-align: center"><a href="#">baidu</a></div>
+
+
+    <div class ="cla1">中北</div><hr>
+<!--  可以定义多个class别名  -->
+    <div class ="cla1 cla2">中北</div>
+<!--caption 标题-->
+<caption>学生信息</caption>
+<!--table 表格-->
+<table border = "1" cellspacing="0" cellpadding="10">
+<!--    cellpadding  单元格的距离   -->
+
+    <!--  td 表头  -->
+    <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>成绩</td>
+    </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    <!--  (tr>td*4)*4  -->
+    <tr>
+<!--    colspan 横向合并，rowspan 竖向合并    -->
+        <td rowspan = "2">1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+<!--        <td>2</td>-->
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+</table>
+<!--    table>tr>td   -->
+</body>
+</html>

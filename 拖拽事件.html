@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: 0;
+            }
+            .cla{
+                background-color: #FF7D35;
+
+            }
+            .cla2{
+                background-color: #157bef;
+            }
+            .cla3{
+                background-color: #e3e3e3;
+            }
+            .cla4{
+                background-color: #4cae4c;
+            }
+            .cla5{
+                background-color: #555555;
+            }
+            .cla6{
+                background-color: #761c19;
+            }
+            .cla7{
+                background-color: #c7254e;
+            }
+            .cla8{
+                background-color: #bce8f1;
+            }
+            .cla8{
+                background-color: #c9e2b3;
+            }
+            .cla9{
+                background-color: #f0ad4e;
+            }
+            .cla10{
+                background-color: #ffff00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cla"></div>
+        <div class="cla1"></div>
+        <div class="cla2"></div>
+        <div class="cla3"></div>
+        <div class="cla4"></div>
+        <div class="cla5"></div>
+        <div class="cla6"></div>
+        <div class="cla7"></div>
+        <div class="cla8"></div>
+        <div class="cla9"></div>
+        <div class="cla10"></div>
+
+    </body>
+    <script src="html/jquery-3.4.1.min.js"></script>
+    <script>
+//        <!--拖拽效果 第一个版本v0-->
+////        事件嵌套，移动事件，鼠标按下，抬起事件
+//        $("div").on("mousedown",function () {
+////            $(this)表示所点击的div
+//            var this_div = $(this);
+//            $(document).on("mousemove",function(){
+//                //               获取鼠标的位置
+//                var x =  event.pageX;
+//                var y = event.pageY;
+//                this_div.css({
+//                    left:`${x}px`,
+//                    top:`${y}px`,
+//                });
+//            })
+//        })
+//        $("div").on("mouseup",function () {
+//            $(document).off("mousemove")
+//        })
+
+//        <!--拖拽效果 第er个版本v1-->
+
+        //        事件嵌套，移动事件，鼠标按下，抬起事件
+        $("div").on("mousedown",function () {
+//            获取鼠标所在的位置
+            var mouse_x = event.pageX;
+            var mouse_y = event.pageY;
+//            获取标签所在的位置
+            var div_x = $(this).offset().left;
+            var div_y = $(this).offset().top;
+//            鼠标到标签左边距和上边距
+            var mouse_div_x = mouse_x-div_x;
+            var mouse_div_y = mouse_y-div_y;
+//            $(this)表示所点击的div
+            var this_div = $(this);
+            $(document).on("mousemove",function(){
+//               获取鼠标的位置到页面边缘的距离
+               var mouse_dom_x = event.pageX;
+               var mouse_dom_y = event.pageY;
+
+           // 标签实际移动的距离
+                var x =  mouse_dom_x - mouse_div_x;
+                var y = mouse_dom_y - mouse_div_y;
+                this_div.css({
+                    left:`${x}px`,
+                    top:`${y}px`,
+
+                });
+            })
+        })
+        $("div").on("mouseup",function () {
+            $(document).off("mousemove")
+        })
+    </script>
+</html>
